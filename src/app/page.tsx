@@ -216,13 +216,6 @@ export default function Home() {
                       <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
                         La creación de PAASMALINCA, C.A. responde a una visión estratégica de ingeniería de alta especialización, diseñada para transformar radicalmente el panorama del mantenimiento industrial y la tecnología en el oriente venezolano. Específicamente, la organización concentra sus operaciones en los estados Anzoátegui y Monagas, abarcando las áreas operacionales clave de la Faja Petrolífera del Orinoco y sus complejos de refinación adyacentes.
                       </p>
-                      
-                      <div className="w-full h-px bg-outline-variant/50 my-8"></div>
-                      
-                      <h3 className="font-label-bold text-label-bold text-secondary uppercase tracking-widest mb-2 text-[12px]">PROPÓSITO FUNDAMENTAL</h3>
-                      <p className="font-body-md text-body-md text-on-surface-variant text-[14px]">
-                        El propósito fundamental de la empresa es mitigar el diferimiento de producción en pozos e instalaciones de gas natural, eliminando las caídas imprevistas en la producción mediante una respuesta inmediata ante fallas críticas.
-                      </p>
                     </div>
                   </div>
                 </article>
