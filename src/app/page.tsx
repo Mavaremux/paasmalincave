@@ -186,37 +186,149 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-section-gap bg-surface-container-low border-y border-outline-variant">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <section id="about" className="bg-surface-container-low border-y border-outline-variant">
+          {/* Dark Header */}
+          <div className="w-full bg-primary py-16 md:py-24 px-margin-mobile md:px-margin-desktop text-white">
+            <div className="max-w-container-max mx-auto">
+              <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-sm mb-4 border border-white/20">
+                <span className="material-symbols-outlined text-[16px]">business</span>
+                <span className="font-label-bold text-label-bold text-[12px] uppercase tracking-widest text-white">PERFIL CORPORATIVO</span>
+              </div>
+              <h2 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white">
+                Ingeniería de Alta Especialización
+              </h2>
+            </div>
+          </div>
+
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-              <article className="md:col-span-8 bg-surface-container-lowest border border-outline-variant p-6 md:p-10 rounded hover:shadow-sm hover:border-primary transition-all duration-300">
-                <div className="flex items-start gap-4 mb-stack-lg">
-                  <div className="p-3 bg-surface-container-low text-primary rounded border border-outline-variant hidden sm:block">
-                    <span className="material-symbols-outlined text-[32px] font-light">my_location</span>
+              
+              {/* Left Column */}
+              <div className="md:col-span-8 flex flex-col gap-gutter">
+                {/* Vision Card */}
+                <article className="bg-surface-container-lowest border border-outline-variant p-6 md:p-10 rounded hover:shadow-sm hover:border-primary-container transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-surface-container-low text-primary rounded border border-outline-variant hidden sm:block shrink-0">
+                      <span className="material-symbols-outlined text-[32px] font-light">my_location</span>
+                    </div>
+                    <div>
+                      <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm">Visión Estratégica</h2>
+                      <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        La creación de PAASMALINCA, C.A. responde a una visión estratégica de ingeniería de alta especialización, diseñada para transformar radicalmente el panorama del mantenimiento industrial y la tecnología en el oriente venezolano. Específicamente, la organización concentra sus operaciones en los estados Anzoátegui y Monagas, abarcando las áreas operacionales clave de la Faja Petrolífera del Orinoco y sus complejos de refinación adyacentes.
+                      </p>
+                      
+                      <div className="w-full h-px bg-outline-variant/50 my-8"></div>
+                      
+                      <h3 className="font-label-bold text-label-bold text-secondary uppercase tracking-widest mb-2 text-[12px]">PROPÓSITO FUNDAMENTAL</h3>
+                      <p className="font-body-md text-body-md text-on-surface-variant text-[14px]">
+                        El propósito fundamental de la empresa es mitigar el diferimiento de producción en pozos e instalaciones de gas natural, eliminando las caídas imprevistas en la producción mediante una respuesta inmediata ante fallas críticas.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm">Visión Estratégica</h2>
-                    <p className="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                      La creación de PAASMALINC.A responde a una visión estratégica de ingeniería de alta especialización, diseñada para transformar radicalmente el panorama del mantenimiento industrial y la tecnología en el oriente venezolano.
-                    </p>
+                </article>
+
+                {/* Leadership Card */}
+                <article className="bg-surface-container-lowest border border-outline-variant p-6 md:p-10 rounded hover:shadow-sm hover:border-primary-container transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-surface-container-low text-primary rounded border border-outline-variant hidden sm:block shrink-0">
+                      <span className="material-symbols-outlined text-[32px] font-light">assignment_ind</span>
+                    </div>
+                    <div>
+                      <h2 className="font-headline-md text-headline-md text-primary mb-stack-sm">Liderazgo Corporativo</h2>
+                      <div className="flex flex-col gap-1 mt-4">
+                        <span className="font-headline-sm text-headline-sm text-primary text-[18px]">Alex Mavares</span>
+                        <span className="font-label-bold text-label-bold text-secondary uppercase tracking-widest text-[12px]">PDTE. PAASMALINCA</span>
+                        <span className="font-body-md text-body-md text-on-surface-variant flex items-center gap-2 mt-1 text-[14px]">
+                          <span className="material-symbols-outlined text-[16px]">call</span>
+                          +58 424 8541279
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </article>
+                </article>
+              </div>
+
+              {/* Right Column */}
               <div className="md:col-span-4 flex flex-col gap-gutter" id="clients">
-                <div className="bg-primary text-on-primary p-6 rounded border border-primary-container relative overflow-hidden h-full flex flex-col justify-center">
+                {/* Aliado Tecnológico Card */}
+                <article className="bg-surface-container-lowest border border-outline-variant p-6 md:p-8 rounded hover:shadow-sm hover:border-primary-container transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="bg-secondary/10 p-2 rounded-full text-secondary">
+                       <span className="material-symbols-outlined text-[20px]">handshake</span>
+                    </div>
+                    <h2 className="font-headline-sm text-headline-sm text-primary text-[20px]">Aliado Tecnológico</h2>
+                  </div>
+                  <p className="font-body-md text-body-md text-on-surface-variant mb-6 text-[14px]">
+                    PAASMALINCA, C.A. se posiciona como un aliado estratégico enfocado en la optimización de procesos mediante soluciones de vanguardia.
+                  </p>
+                  
+                  <div className="flex flex-col gap-3">
+                    <div className="flex items-center gap-3 border border-outline-variant rounded p-3 bg-white">
+                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">tune</span>
+                      <span className="font-label-bold text-label-bold text-[14px] text-primary">Instrumentación</span>
+                    </div>
+                    <div className="flex items-center gap-3 border border-outline-variant rounded p-3 bg-white">
+                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">dns</span>
+                      <span className="font-label-bold text-label-bold text-[14px] text-primary">Sistemas DCS</span>
+                    </div>
+                    <div className="flex items-center gap-3 border border-outline-variant rounded p-3 bg-white">
+                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">router</span>
+                      <span className="font-label-bold text-label-bold text-[14px] text-primary">Controladores PLC</span>
+                    </div>
+                    <div className="flex items-center gap-3 border border-outline-variant rounded p-3 bg-white">
+                      <span className="material-symbols-outlined text-on-surface-variant text-[20px]">monitor</span>
+                      <span className="font-label-bold text-label-bold text-[14px] text-primary">Sistemas SCADA</span>
+                    </div>
+                  </div>
+                </article>
+
+                {/* Normativas Card */}
+                <div className="bg-primary text-on-primary p-6 md:p-8 rounded border border-primary-container relative overflow-hidden flex flex-col justify-center shadow-md">
                   <div className="absolute -right-10 -top-10 opacity-10">
                     <span className="material-symbols-outlined text-[150px]">verified</span>
                   </div>
                   <div className="relative z-10">
-                    <h3 className="font-headline-sm text-headline-sm mb-stack-md">Normativas y Calidad</h3>
-                    <p className="font-body-md text-body-md text-inverse-primary/80 mb-stack-lg">
+                    <h3 className="font-headline-sm text-headline-sm mb-stack-md text-white text-[20px]">Normativas y Calidad</h3>
+                    <p className="font-body-md text-body-md text-inverse-primary/80 mb-stack-lg text-[14px]">
                       La organización alinea rigurosamente sus procesos con exigentes normativas internacionales y especificaciones técnicas.
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-surface-tint/20 border border-inverse-primary/30 font-caption text-caption rounded text-inverse-primary">Normas API</span>
-                      <span className="px-3 py-1 bg-surface-tint/20 border border-inverse-primary/30 font-caption text-caption rounded text-inverse-primary">Estándares ISO</span>
-                      <span className="px-3 py-1 bg-surface-tint/20 border border-inverse-primary/30 font-caption text-caption rounded text-inverse-primary">Specs PDVSA</span>
+                      <span className="px-2 py-1 border border-inverse-primary/30 font-caption text-caption rounded text-inverse-primary text-[11px]">Normas API</span>
+                      <span className="px-2 py-1 border border-inverse-primary/30 font-caption text-caption rounded text-inverse-primary text-[11px]">Estándares ISO</span>
+                      <span className="px-2 py-1 border border-inverse-primary/30 font-caption text-caption rounded text-inverse-primary text-[11px]">Specs PDVSA</span>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Clientes Section */}
+            <div className="mt-20 pt-16 border-t border-outline-variant flex flex-col items-center">
+              <h3 className="font-headline-sm text-headline-sm text-primary mb-12 text-center relative pb-4">
+                Algunos de Nuestros Clientes
+                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-1 bg-secondary rounded"></span>
+              </h3>
+              
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+                {/* PDVSA Industrial Logo Placeholder */}
+                <div className="flex items-center gap-3 bg-white px-6 py-4 border border-outline-variant rounded hover:shadow-sm transition-shadow grayscale hover:grayscale-0">
+                  <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-full text-white shrink-0">
+                    <span className="material-symbols-outlined text-[24px]">oil_barrel</span>
+                  </div>
+                  <div className="flex flex-col border-l-2 border-primary pl-3">
+                    <span className="font-display-lg-mobile text-[22px] font-bold text-primary leading-none tracking-tight">PDVSA</span>
+                    <span className="font-label-bold text-[11px] tracking-widest text-primary">INDUSTRIAL</span>
+                  </div>
+                </div>
+                
+                {/* PDVSA Gas Logo Placeholder */}
+                <div className="flex items-center gap-3 bg-white px-6 py-4 border border-outline-variant rounded hover:shadow-sm transition-shadow grayscale hover:grayscale-0">
+                  <div className="w-10 h-10 bg-primary flex items-center justify-center rounded-full text-white shrink-0">
+                    <span className="material-symbols-outlined text-[24px]">local_gas_station</span>
+                  </div>
+                  <div className="flex flex-col border-l-2 border-primary pl-3">
+                    <span className="font-display-lg-mobile text-[22px] font-bold text-primary leading-none tracking-tight">PDVSA</span>
+                    <span className="font-label-bold text-[11px] tracking-widest text-primary">GAS</span>
                   </div>
                 </div>
               </div>
