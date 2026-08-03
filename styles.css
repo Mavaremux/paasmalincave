@@ -1434,3 +1434,59 @@ p {
     letter-spacing: 0.08em;
   }
 }
+
+/* ── Responsive Móvil (máx. 768px): no afecta el diseño de escritorio ── */
+@media (max-width: 768px) {
+  /* 1. Eliminar desbordamiento horizontal: cuerpo y contenedores al 100% */
+  html,
+  body,
+  .page-wrapper,
+  .main-content,
+  .header-inner,
+  .section-inner,
+  .footer-inner,
+  .hero-section {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: clip;
+  }
+
+  /* 2. Títulos principales ajustados para no salirse ni encimarse */
+  .hero-copy h1 {
+    font-size: clamp(1.8rem, 7.5vw, 3rem);
+    line-height: 1.08;
+    overflow-wrap: break-word;
+  }
+
+  .section-heading h2 {
+    font-size: clamp(1.55rem, 6.5vw, 2.1rem);
+    line-height: 1.15;
+  }
+
+  .experiencia-title,
+  .mecanica-title {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    line-height: 1.25;
+  }
+
+  .product-card-head h3 {
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+
+  .contact-form-card h3 {
+    font-size: 1.4rem;
+  }
+
+  /* 3. Imágenes y botones adaptados al ancho del teléfono */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
