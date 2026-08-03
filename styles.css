@@ -1437,6 +1437,16 @@ p {
 
 /* ── Responsive Móvil (máx. 768px): no afecta el diseño de escritorio ── */
 @media (max-width: 768px) {
+  /* Protección de raíz: la página NUNCA genera scroll horizontal en móviles.
+     overflow-x: clip no crea scroll container (no rompe el header sticky);
+     hidden es el fallback para navegadores antiguos. */
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
+
   /* 1. Eliminar desbordamiento horizontal: cuerpo y contenedores al 100% */
   html,
   body,
