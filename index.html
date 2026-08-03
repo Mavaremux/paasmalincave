@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAASMALIN C.A. | Instrumentación Industrial</title>
+    <meta name="description" content="PAASMALIN C.A. ofrece instrumentación industrial, automatización y servicios de mantenimiento para el sector petrolero y gasífero en Venezuela." />
+    <meta name="keywords" content="instrumentación industrial, automatización, válvulas de seguridad, calibración, mantenimiento petrolero, PLC, RTU, cajas orificio Daniel" />
+    <meta property="og:title" content="PAASMALIN C.A. | Instrumentación Industrial" />
+    <meta property="og:description" content="Servicios técnicos de calibración, mantenimiento y control automatizado para la industria petrolera y gasífera en Anzoátegui, Venezuela." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="src/media/hero_industrial.png" />
+    <meta property="og:locale" content="es_VE" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Qué tipo de certificaciones tienen sus calibraciones?","acceptedAnswer":{"@type":"Answer","text":"Nuestras calibraciones se realizan siguiendo los más altos estándares y normativas internacionales (como AGA, API, NFPA e ISA), utilizando equipos patrón certificados y trazables."}},{"@type":"Question","name":"¿Ofrecen servicios de mantenimiento en campo (in-situ)?","acceptedAnswer":{"@type":"Answer","text":"Sí, contamos con personal altamente calificado para realizar mantenimientos preventivos y correctivos, así como diagnósticos y calibraciones directamente en las instalaciones del cliente."}},{"@type":"Question","name":"¿En qué zonas de Venezuela operan?","acceptedAnswer":{"@type":"Answer","text":"Nuestra sede principal está en Anaco, Estado Anzoátegui, pero ofrecemos cobertura y servicios especializados a nivel nacional para todo el sector petrolero y gasífero."}},{"@type":"Question","name":"¿Tienen capacidad para actualizar sistemas de control obsoletos?","acceptedAnswer":{"@type":"Answer","text":"Absolutamente. Nos especializamos en la migración de sistemas obsoletos, integración de gabinetes y actualización de lógicas de control para PLC y RTU."}}]}
+    </script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand custom-logo" href="#">
+            <svg class="logo-gears" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <path id="gear-tooth" d="M -5,-25 L -3,-30 L 3,-30 L 5,-25 Z" fill="#fff000" stroke="#d58e00" stroke-width="1.8" stroke-linejoin="round"/>
+                <g id="gear">
+                  <circle cx="0" cy="0" r="23" fill="#fff000" stroke="#d58e00" stroke-width="1.8"/>
+                  <use href="#gear-tooth" transform="rotate(0)" />
+                  <use href="#gear-tooth" transform="rotate(30)" />
+                  <use href="#gear-tooth" transform="rotate(60)" />
+                  <use href="#gear-tooth" transform="rotate(90)" />
+                  <use href="#gear-tooth" transform="rotate(120)" />
+                  <use href="#gear-tooth" transform="rotate(150)" />
+                  <use href="#gear-tooth" transform="rotate(180)" />
+                  <use href="#gear-tooth" transform="rotate(210)" />
+                  <use href="#gear-tooth" transform="rotate(240)" />
+                  <use href="#gear-tooth" transform="rotate(270)" />
+                  <use href="#gear-tooth" transform="rotate(300)" />
+                  <use href="#gear-tooth" transform="rotate(330)" />
+                  <circle cx="0" cy="0" r="10" fill="#ffffff" stroke="#d58e00" stroke-width="1.8"/>
+                </g>
+              </defs>
+              <!-- Engranaje Izquierdo -->
+              <use href="#gear" transform="translate(28, 52) scale(0.85) rotate(15)"/>
+              <!-- Engranaje Superior Derecho -->
+              <use href="#gear" transform="translate(62, 30) scale(0.9) rotate(0)"/>
+              <!-- Engranaje Inferior Derecho -->
+              <use href="#gear" transform="translate(60, 75) scale(1.05) rotate(8)"/>
+            </svg>
+            <div class="logo-text">
+              <span class="logo-name">P A A S M A L I N , C . A</span>
+            </div>
+          </a>
+          <nav class="desktop-nav">
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+            <a class="button button-primary" href="mailto:paasmalinca@gmail.com?subject=Solicitud%20de%20Cotizaci%C3%B3n">COTIZAR</a>
+          </nav>
+          <button id="mobile-menu-toggle" class="mobile-toggle" aria-label="Abrir menú">
+            <span class="material-icons">menu</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        <a class="button button-primary mobile-quote" href="mailto:paasmalinca@gmail.com?subject=Solicitud%20de%20Cotizaci%C3%B3n">SOLICITAR COTIZACIÓN</a>
+      </div>
+
+      <main class="main-content">
+        <section class="hero-section">
+          <div class="hero-overlay"></div>
+          <div class="hero-copy">
+            <p class="hero-label">Instrumentación Industrial</p>
+            <h1>Excelencia y Precisión en <span>Instrumentación Industrial</span></h1>
+            <p class="hero-description">Soluciones avanzadas en calibración, mantenimiento y control automatizado para el sector petrolero y gasífero en Venezuela.</p>
+            <div class="hero-actions">
+              <a class="button button-secondary" href="#servicios">VER SERVICIOS</a>
+              <a class="button button-white" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20t%C3%A9cnica." target="_blank" rel="noreferrer">HABLA CON UN EXPERTO AHORA</a>
+            </div>
+            <div class="hero-trust">
+              <span>Empresas que confían en nosotros</span>
+             <div class="trust-list">
+    <!-- 1. PDVSA -->
+    <a href="https://www.pdvsa.com" target="_blank" rel="noopener noreferrer">
+        <!-- Torre de perforación / Oil derrick – PDVSA -->
+        <svg class="trust-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="14,3 5,24 23,24" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <line x1="14" y1="3" x2="14" y2="24" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="9.5" y1="17" x2="18.5" y2="17" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="11" y1="11" x2="17" y2="11" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="3" y1="24" x2="25" y2="24" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        PDVSA
+    </a>
+
+    <!-- 2. Chevron -->
+    <a href="https://www.chevron.com" target="_blank" rel="noopener noreferrer">
+        <!-- Doble chevron – marca visual de Chevron Corp -->
+        <svg class="trust-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polyline points="5,7 14,16 23,7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="5,15 14,24 23,15" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Chevron
+    </a>
+
+    <!-- 3. Repsol -->
+    <a href="https://www.repsol.com" target="_blank" rel="noopener noreferrer">
+        <!-- Llama de refinería – REPSOL energía -->
+        <svg class="trust-icon" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14,25 C8,25 4.5,20 4.5,15.5 C4.5,11 7.5,8.5 10,8 C8.5,12.5 12.5,13.5 12.5,10.5 C12.5,7 15,4.5 17.5,3 C17.5,7 21,9.5 21,15.5 C21,20 20,25 14,25 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <circle cx="14" cy="17.5" r="1.8" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        REPSOL
+    </a>
+</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="nosotros" class="section section-white">
+          <div class="section-inner">
+            <div class="section-heading text-center">
+              <span class="material-icons section-icon">business</span>
+              <h2>Quienes Somos</h2>
+              <p>PAASMALIN, C.A. es una empresa venezolana de ingeniería y servicios industriales especializada en instrumentación, electricidad, electrónica y control automatizado, ubicada en Anaco, Estado Anzoátegui.</p>
+            </div>
+            <div class="about-grid">
+              <div class="about-card">
+                <div class="about-accent"></div>
+                <p class="about-text">PAASMALIN, C.A. es una empresa ubicada en Anaco, Edo Anzoátegui, que ofrece servicios de mantenimiento, automatización, y asesorías en sectores energéticos y de equipos rotativos. Su experiencia incluye mantenimiento a compresores y motores, así como la fabricación de estructuras metálicas y soluciones en bombas de cavidad progresiva. La empresa cuenta con un equipo técnico capacitado y una infraestructura adecuada para realizar trabajos en entornos de alta complejidad y riesgo.</p>
+                <div class="about-info">
+                  <span class="material-icons">person</span>
+                  <div>
+                    <p class="info-label">Presidente</p>
+                    <p class="info-value">Alex Mavares</p>
+                  </div>
+                </div>
+                <div class="about-highlight">
+                  Con el compromiso de la reactivación energética de Venezuela y el suministro de expertos, servicios e instrumentos para la industria petrolera y gasífera.
+                </div>
+              </div>
+              <div class="about-gallery">
+                <div class="gallery-large image-card">
+                  <img src="src/media/infraestructura.jpeg" alt="Infraestructura industrial" />
+                  <span>INFRAESTRUCTURA</span>
+                </div>
+                <div class="gallery-small image-card">
+                  <img src="src/media/refineria_el_cardon_trabajos_proximos.jpeg" alt="Instalación industrial" />
+                  <span>PROCESOS</span>
+                </div>
+                <div class="gallery-small image-card">
+                  <img src="src/media/trabajosrealizados_paasmalinca.jpeg" alt="Proyecto industrial" />
+                  <span>CALIBRACIÓN</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="experiencia-section">
+              <div class="experiencia-header">
+                <span class="material-icons experiencia-icon">military_tech</span>
+                <div>
+                  <p class="experiencia-label">Trayectoria comprobada</p>
+                  <h3 class="experiencia-title">Experiencia y <span>Capacidad</span></h3>
+                </div>
+              </div>
+              <div class="experiencia-grid">
+                <div class="experiencia-card">
+                  <span class="material-icons">engineering</span>
+                  <div>
+                    <strong>Personal Técnico de Ingeniería</strong>
+                    <p>Capacidades comprobadas en el área Industrial Gasífera con certificaciones vigentes.</p>
+                  </div>
+                </div>
+                <div class="experiencia-card">
+                  <span class="material-icons">assignment</span>
+                  <div>
+                    <strong>Gestión Administrativa de Contratos</strong>
+                    <p>Experiencia en Contratos de Mantenimiento e Instalación de menor y mayor magnitud.</p>
+                  </div>
+                </div>
+                <div class="experiencia-card">
+                  <span class="material-icons">warehouse</span>
+                  <div>
+                    <strong>Taller de 1.000 m²</strong>
+                    <p>Instalaciones propias equipadas para ejecutar los diferentes servicios técnicos especializados.</p>
+                  </div>
+                </div>
+                <div class="experiencia-card">
+                  <span class="material-icons">location_city</span>
+                  <div>
+                    <strong>Sede y Sucursal</strong>
+                    <p>Oficinas en Sector Las Garzas Torre BVC — Sucursal Lechería, Anzoátegui.</p>
+                  </div>
+                </div>
+                <div class="experiencia-card">
+                  <span class="material-icons">health_and_safety</span>
+                  <div>
+                    <strong>Labores de Alto Riesgo</strong>
+                    <p>Disponibilidad para ejecutar trabajos con altos niveles de riesgo en múltiples disciplinas.</p>
+                  </div>
+                </div>
+                <div class="experiencia-card">
+                  <span class="material-icons">public</span>
+                  <div>
+                    <strong>Cobertura Nacional e Internacional</strong>
+                    <p>Capacidad operativa en escala geográfica a nivel nacional e internacional.</p>
+                  </div>
+                </div>
+                <div class="experiencia-card">
+                  <span class="material-icons">groups</span>
+                  <div>
+                    <strong>Experiencia Gerencial</strong>
+                    <p>Personal directivo con trayectoria reconocida en la gestión de organizaciones industriales.</p>
+                  </div>
+                </div>
+                <div class="experiencia-card">
+                  <span class="material-icons">developer_board</span>
+                  <div>
+                    <strong>Actualización Tecnológica</strong>
+                    <p>Progresivo y consecuente con los adelantos tecnológicos del sector energético.</p>
+                  </div>
+                </div>
+                <div class="experiencia-card">
+                  <span class="material-icons">compress</span>
+                  <div>
+                    <strong>Ambientes de Alta Presión</strong>
+                    <p>Familiarizado con el desarrollo de labores técnicas en entornos de presión operativa exigente.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="servicios" class="section section-light">
+          <div class="section-inner">
+            <div class="section-heading text-center">
+              <h2>Servicios <span>Especializados</span></h2>
+              <p>Transmisores y Posicionadores, Paneles de Control, Pruebas Hidrostáticas, Mecanizado de Piezas, Reparación In Situ.</p>
+            </div>
+
+            <div class="products-grid">
+              <article class="product-card">
+                <div class="product-card-head"><span class="material-icons">security</span><h3>VÁLVULAS DE SEGURIDAD</h3></div>
+                <img src="src/media/valvula_de_seguridad.jpg" alt="Válvulas de seguridad" />
+              </article>
+              <article class="product-card">
+                <div class="product-card-head"><span class="material-icons">tune</span><h3>VÁLVULAS DE CONTROL</h3></div>
+                <img src="src/media/valvula de control ampliada.png" alt="Válvulas de control" />
+              </article>
+              <article class="product-card">
+                <div class="product-card-head"><span class="material-icons">straighten</span><h3>CAJAS ORIFICIO DANIEL</h3></div>
+                <img src="src/media/caja_orificio_daniel2.PNG" alt="Cajas orificio Daniel" />
+              </article>
+              <article class="product-card">
+                <div class="product-card-head"><span class="material-icons">speed</span><h3>BANCOS DE PRUEBAS PARA VÁLVULAS</h3></div>
+                <img src="src/media/banco_pruebas_seguridad_valvulas.jpg" alt="Bancos de pruebas" />
+              </article>
+              <article class="product-card">
+                <div class="product-card-head"><span class="material-icons">settings</span><h3>REPUESTOS DE VÁLVULAS DE CONTROL</h3></div>
+                <img src="src/media/repuestovalvula de control2.png" alt="Repuestos de válvulas" />
+              </article>
+              <article class="product-card">
+                <div class="product-card-head"><span class="material-icons">build</span><h3>REPUESTOS DE VÁLVULAS DE SEGURIDAD</h3></div>
+                <img src="src/media/repuestovalvula de seguridad2.jpg" alt="Repuestos de válvulas de seguridad" />
+              </article>
+              <article class="cta-banner">
+                <a href="#contacto" title="Ir al formulario de contacto">
+                  <img src="src/media/cta_banner.png" alt="Cotiza cualquier servicio o repuesto no encontrado en el formulario de contacto" />
+                </a>
+              </article>
+            </div>
+
+            <div class="mecanica-section">
+              <div class="mecanica-header">
+                <span class="material-icons mecanica-icon">construction</span>
+                <div>
+                  <p class="mecanica-label">Servicios Especializados</p>
+                  <h3 class="mecanica-title">Mecánica <span>Industrial</span></h3>
+                </div>
+              </div>
+              <div class="mecanica-grid">
+                <div class="mecanica-card">
+                  <span class="material-icons">precision_manufacturing</span>
+                  <div>
+                    <strong>Fabricación de Spool</strong>
+                    <p>Fabricación de Spool con Equipos Asociados y Soldadura Industrial de alta precisión.</p>
+                  </div>
+                </div>
+                <div class="mecanica-card">
+                  <span class="material-icons">view_in_ar</span>
+                  <div>
+                    <strong>Estructuras Metálicas</strong>
+                    <p>Fabricación de Estructuras Metálicas en Vigas de cualquier variedad y dimensión.</p>
+                  </div>
+                </div>
+                <div class="mecanica-card">
+                  <span class="material-icons">security</span>
+                  <div>
+                    <strong>Confinamiento Anti-Robo</strong>
+                    <p>Estructuras Mixtas en Concreto, Vigas, Metal Corrugado y Cercas Blindadas para estaciones y locaciones.</p>
+                  </div>
+                </div>
+                <div class="mecanica-card">
+                  <span class="material-icons">settings</span>
+                  <div>
+                    <strong>Over Haul — Motocompresores</strong>
+                    <p>Servicio completo a Motocompresores de Gas: Caterpillar, Waukesha, Clark, Ingersoll Rand, Dresser-Rand, Cooper y más.</p>
+                  </div>
+                </div>
+                <div class="mecanica-card">
+                  <span class="material-icons">ac_unit</span>
+                  <div>
+                    <strong>Sistemas de Enfriamiento</strong>
+                    <p>Mantenimiento Preventivo a Sistemas de Enfriamiento (Coolers) en plantas industriales.</p>
+                  </div>
+                </div>
+                <div class="mecanica-card">
+                  <span class="material-icons">local_fire_department</span>
+                  <div>
+                    <strong>Redes Contra Incendios</strong>
+                    <p>Adecuación de redes contra incendios con Agua y Espuma según normativas vigentes.</p>
+                  </div>
+                </div>
+                <div class="mecanica-card">
+                  <span class="material-icons">highlight</span>
+                  <div>
+                    <strong>Torres de Iluminación</strong>
+                    <p>Fabricación de Torres para Iluminación de Estadios, Plantas Industriales, Fincas y Aeropuertos.</p>
+                  </div>
+                </div>
+                <div class="mecanica-card">
+                  <span class="material-icons">rv_hookup</span>
+                  <div>
+                    <strong>Grúas Telescópicas</strong>
+                    <p>Suministro de Grúas Telescópicas con Brazo Hidráulico de 8Tn y 12Tn, y servicio Vaccum.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-tabs">
+              <button class="service-tab-btn active" data-tab="0">Cajas Orificio Daniel</button>
+              <button class="service-tab-btn" data-tab="1">Medidor Coriolis</button>
+              <button class="service-tab-btn" data-tab="2">Paneles de Control</button>
+              <button class="service-tab-btn" data-tab="3">Válvulas de Seguridad</button>
+              <button class="service-tab-btn" data-tab="4">Transmisores de Presión</button>
+              <button class="service-tab-btn" data-tab="5">Medidores de Nivel</button>
+              <button class="service-tab-btn" data-tab="6">Actuadores</button>
+              <button class="service-tab-btn" data-tab="7">PLC y RTU</button>
+            </div>
+
+            <div class="service-details">
+              <article class="service-detail active" data-detail="0">
+                <div class="service-detail-image"><img src="src/media/caja_orificio_daniel.jpeg" alt="Cajas Orificio Daniel" /></div>
+                <div class="service-detail-copy">
+                  <h3>Cajas Orificio Daniel</h3>
+                  <p>Soluciones precisas para la medición de flujo de gas y líquidos con estándares internacionales.</p>
+                  <ul>
+                    <li>Diseño e ingeniería de cajas orificio según normas AGA/API</li>
+                    <li>Fabricación con materiales certificados</li>
+                    <li>Calibración y certificación de placas orificio</li>
+                    <li>Mantenimiento preventivo y correctivo en campo</li>
+                  </ul>
+                  <a class="button button-primary" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20sobre%20cajas%20orificio">Solicitar este servicio</a>
+                </div>
+              </article>
+              <article class="service-detail" data-detail="1">
+                <div class="service-detail-image"><img src="src/media/coriolis_medidor.jpeg" alt="Medidor Coriolis" /></div>
+                <div class="service-detail-copy">
+                  <h3>Medidor Coriolis</h3>
+                  <p>Medición directa de masa y densidad de alta precisión para fluidos complejos y desafiantes.</p>
+                  <ul>
+                    <li>Instalación de medidores Coriolis para crudo, gas y agua</li>
+                    <li>Programación y configuración de transmisores de flujo</li>
+                    <li>Verificación in-situ y calibración trazable</li>
+                    <li>Diagnóstico de problemas de medición</li>
+                  </ul>
+                  <a class="button button-primary" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20sobre%20medidor%20Coriolis">Solicitar este servicio</a>
+                </div>
+              </article>
+              <article class="service-detail" data-detail="2">
+                <div class="service-detail-image"><img src="src/media/paneles_de_control.jpg" alt="Paneles de Control" /></div>
+                <div class="service-detail-copy">
+                  <h3>Paneles de Control</h3>
+                  <p>Diseño, ensamblaje y puesta en marcha de sistemas de control industrial personalizados.</p>
+                  <ul>
+                    <li>Diseño e integración de paneles con PLC y DCS</li>
+                    <li>Cableado e instalación según normativas NFPA e ISA</li>
+                    <li>Comisionamiento y pruebas FAT/SAT</li>
+                    <li>Soporte post-instalación y mantenimiento</li>
+                  </ul>
+                  <a class="button button-primary" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20sobre%20paneles%20de%20control">Solicitar este servicio</a>
+                </div>
+              </article>
+              <article class="service-detail" data-detail="3">
+                <div class="service-detail-image"><img src="src/media/valvula_de_seguridad.jpg" alt="Válvulas de Seguridad" /></div>
+                <div class="service-detail-copy">
+                  <h3>Válvulas de Seguridad</h3>
+                  <p>Mantenimiento, calibración y suministro de válvulas de seguridad y alivio de presión.</p>
+                  <ul>
+                    <li>Calibración de válvulas PSV según normas API 526/527</li>
+                    <li>Mantenimiento y reparación en taller</li>
+                    <li>Suministro de válvulas nuevas y repuestos</li>
+                    <li>Pruebas de banco con certificación</li>
+                  </ul>
+                  <a class="button button-primary" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20sobre%20válvulas%20de%20seguridad">Solicitar este servicio</a>
+                </div>
+              </article>
+              <article class="service-detail" data-detail="4">
+                <div class="service-detail-image"><img src="src/media/transmisor_de_presion.webp" alt="Transmisores de Presión" /></div>
+                <div class="service-detail-copy">
+                  <h3>Transmisores de Presión</h3>
+                  <p>Instrumentación de campo de alta exactitud para el monitoreo continuo de variables críticas en tuberías y separadores.</p>
+                  <ul>
+                    <li>Calibración de transmisores HART y Foundation Fieldbus.</li>
+                    <li>Medición de presión estática, diferencial y temperatura.</li>
+                    <li>Reemplazo de sensores y configuración de rangos.</li>
+                  </ul>
+                  <a class="button button-primary" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20sobre%20transmisores%20de%20presi%C3%B3n">Solicitar este servicio</a>
+                </div>
+              </article>
+              <article class="service-detail" data-detail="5">
+                <div class="service-detail-image"><img src="src/media/medidores_nivel.jpg" alt="Medidores de Nivel" /></div>
+                <div class="service-detail-copy">
+                  <h3>Medidores de Nivel</h3>
+                  <p>Soluciones de medición de nivel sin contacto para tanques de almacenamiento de crudo y separadores de producción.</p>
+                  <ul>
+                    <li>Instalación de radares de onda guiada y espacio libre.</li>
+                    <li>Integración con sistemas de telemetría y control.</li>
+                    <li>Mantenimiento y diagnóstico de ecos.</li>
+                  </ul>
+                  <a class="button button-primary" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20sobre%20medidores%20de%20nivel">Solicitar este servicio</a>
+                </div>
+              </article>
+              <article class="service-detail" data-detail="6">
+                <div class="service-detail-image"><img src="src/media/actuadores_hidraulicos.avif" alt="Actuadores y Posicionadores" /></div>
+                <div class="service-detail-copy">
+                  <h3>Actuadores y Posicionadores</h3>
+                  <p>Automatización de válvulas industriales para garantizar una respuesta precisa del lazo de control.</p>
+                  <ul>
+                    <li>Mantenimiento de actuadores neumáticos, hidráulicos y eléctricos.</li>
+                    <li>Calibración de posicionadores inteligentes.</li>
+                    <li>Pruebas de recorrido y diagnóstico de fricción.</li>
+                  </ul>
+                  <a class="button button-primary" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20sobre%20actuadores%20y%20posicionadores">Solicitar este servicio</a>
+                </div>
+              </article>
+              <article class="service-detail" data-detail="7">
+                <div class="service-detail-image"><img src="src\media\plc_rtu.png" alt="Sistemas PLC y RTU" /></div>
+                <div class="service-detail-copy">
+                  <h3>Sistemas PLC y RTU</h3>
+                  <p>Unidades remotas de telemetría y controladores lógicos para la automatización de pozos y estaciones de flujo.</p>
+                  <ul>
+                    <li>Programación y actualización de lógicas de control.</li>
+                    <li>Integración de gabinetes y tableros de control.</li>
+                    <li>Migración de sistemas obsoletos.</li>
+                  </ul>
+                  <a class="button button-primary" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20sobre%20PLC%20y%20RTU">Solicitar este servicio</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-white">
+          <div class="section-inner">
+            <div class="section-heading text-center">
+              <span class="material-icons section-icon">photo_library</span>
+              <h2>Casos de <span>Éxito</span></h2>
+              <p>Proyectos ejecutados con excelencia operativa para la industria petrolera y gasífera nacional.</p>
+            </div>
+            <div class="success-grid">
+              <article class="success-card">
+                <div class="success-image-placeholder" aria-hidden="true"></div>
+                <div>
+                  <strong>Refinería El Palito</strong>
+                  <p>Mantenimiento integral de instrumentación y válvulas de seguridad.</p>
+                </div>
+              </article>
+              <article class="success-card">
+                <div class="success-image-placeholder" aria-hidden="true"></div>
+                <div>
+                  <strong>Planta de Gas Anaco</strong>
+                  <p>Calibración de transmisores y puesta en marcha de sistema de control.</p>
+                </div>
+              </article>
+              <article class="success-card">
+                <div class="success-image-placeholder" aria-hidden="true"></div>
+                <div>
+                  <strong>Estación de Flujo</strong>
+                  <p>Instalación de medidores Coriolis y cajas orificio Daniel.</p>
+                </div>
+              </article>
+              <article class="success-card">
+                <div class="success-image-placeholder" aria-hidden="true"></div>
+                <div>
+                  <strong>Proyecto de Automatización</strong>
+                  <p>Diseño e integración de paneles de control PLC y RTU.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-light">
+          <div class="section-inner">
+            <div class="section-heading text-center">
+              <h2>Metodología de <span>Trabajo</span></h2>
+              <p>Proceso estructurado para garantizar el éxito operativo.</p>
+            </div>
+            <div class="process-grid">
+              <div class="process-card"><span class="material-icons">search</span><p>Diagnóstico</p></div>
+              <div class="process-card"><span class="material-icons">architecture</span><p>Ingeniería</p></div>
+              <div class="process-card"><span class="material-icons">build</span><p>Ejecución</p></div>
+              <div class="process-card"><span class="material-icons">monitoring</span><p>Supervisión</p></div>
+              <div class="process-card"><span class="material-icons">verified</span><p>Entrega</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-white">
+          <div class="section-inner max-w-3xl">
+            <div class="section-heading text-center">
+              <h2>Preguntas <span>Frecuentes</span></h2>
+              <p>Resolvemos las dudas más comunes sobre nuestros servicios industriales.</p>
+            </div>
+            <div class="faq-list">
+              <article class="faq-card">
+                <h3>¿Qué tipo de certificaciones tienen sus calibraciones?</h3>
+                <p>Nuestras calibraciones se realizan siguiendo los más altos estándares y normativas internacionales (como AGA, API, NFPA e ISA), utilizando equipos patrón certificados y trazables.</p>
+              </article>
+              <article class="faq-card">
+                <h3>¿Ofrecen servicios de mantenimiento en campo (in-situ)?</h3>
+                <p>Sí, contamos con personal altamente calificado para realizar mantenimientos preventivos y correctivos, así como diagnósticos y calibraciones directamente en las instalaciones del cliente.</p>
+              </article>
+              <article class="faq-card">
+                <h3>¿En qué zonas de Venezuela operan?</h3>
+                <p>Nuestra sede principal está en Anaco, Estado Anzoátegui, pero ofrecemos cobertura y servicios especializados a nivel nacional para todo el sector petrolero y gasífero.</p>
+              </article>
+              <article class="faq-card">
+                <h3>¿Tienen capacidad para actualizar sistemas de control obsoletos?</h3>
+                <p>Absolutamente. Nos especializamos en la migración de sistemas obsoletos, integración de gabinetes y actualización de lógicas de control para PLC y RTU.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section id="contacto" class="section section-light">
+          <div class="section-inner contact-grid">
+            <div>
+              <h2>Inicie su Proyecto</h2>
+              <p>Contáctenos hoy para evaluar sus requerimientos técnicos. Nuestro equipo de ingenieros está listo para brindarle soluciones.</p>
+              <div class="contact-card"><span class="material-icons">location_on</span><div><strong>Sede Principal</strong><p>Anaco, Edo. Anzoátegui, Venezuela</p></div></div>
+              <div class="contact-card"><span class="material-icons">call</span><div><strong>Contacto Directo</strong><p>+58 424 854 1279</p></div></div>
+              <div class="contact-card"><span class="material-icons">mail</span><div><strong>Correo Electrónico</strong><p>paasmalinca@gmail.com</p></div></div>
+            </div>
+            <div class="contact-form-card">
+              <h3>Formulario Rápido</h3>
+              <form id="contact-form">
+                <label>Nombre Completo<input type="text" name="name" placeholder="Ej. Carlos Mendoza" required /></label>
+                <label>Empresa<input type="text" name="company" placeholder="Razón Social" required /></label>
+                <label>Requerimiento Técnico<textarea name="req" rows="5" placeholder="Describa el alcance de su necesidad..." required></textarea></label>
+                <button type="submit" class="button button-primary">ENVIAR POR WHATSAPP</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-slogan">
+            <p><strong>PROYECTOS, ADIESTRAMIENTOS, ASESORÍAS, SERVICIOS, MANTENIMIENTO,<br>AUTOMATIZACIÓN, LOGÍSTICAS E INVERSIONES, C.A</strong></p>
+            <p class="rif">R.I.F: J-29909162-6</p>
+          </div>
+          <div class="footer-copyright">
+            <p>© 2026 PAASMALIN C.A. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
+      <a class="whatsapp-fab" href="https://wa.me/584248541279?text=Hola%20PAASMALINC.A,%20solicito%20informaci%C3%B3n%20t%C3%A9cnica." target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp">
+        <span class="material-icons">chat</span>
+      </a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
