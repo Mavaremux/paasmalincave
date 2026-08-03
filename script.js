@@ -5,26 +5,41 @@ const SERVICE_DETAILS = document.querySelectorAll(".service-detail");
 const CONTACT_FORM = document.getElementById("contact-form");
 const WHATSAPP_NUMBER = "584248541279";
 
+function setMenuState(open) {
+  MOBILE_MENU.classList.toggle("open", open);
+  MOBILE_MENU_TOGGLE.setAttribute("aria-expanded", String(open));
+  MOBILE_MENU_TOGGLE.innerHTML = `<span class="material-icons">${open ? "close" : "menu"}</span>`;
+  document.body.style.overflow = open ? "hidden" : "";
+}
+
 function closeMobileMenu() {
-  MOBILE_MENU.classList.remove("open");
-  MOBILE_MENU_TOGGLE.innerHTML = '<span class="material-icons">menu</span>';
+  setMenuState(false);
 }
 
 function openMobileMenu() {
-  MOBILE_MENU.classList.add("open");
-  MOBILE_MENU_TOGGLE.innerHTML = '<span class="material-icons">close</span>';
+  setMenuState(true);
 }
 
 MOBILE_MENU_TOGGLE.addEventListener("click", () => {
-  if (MOBILE_MENU.classList.contains("open")) {
-    closeMobileMenu();
-  } else {
-    openMobileMenu();
-  }
+  setMenuState(!MOBILE_MENU.classList.contains("open"));
 });
 
 MOBILE_MENU.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => closeMobileMenu());
+});
+
+document.addEventListener("click", (event) => {
+  if (!MOBILE_MENU.classList.contains("open")) return;
+  if (MOBILE_MENU.contains(event.target) || MOBILE_MENU_TOGGLE.contains(event.target)) return;
+  closeMobileMenu();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMobileMenu();
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 980) closeMobileMenu();
 });
 
 SERVICE_TABS.forEach((button) => {
