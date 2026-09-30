@@ -400,7 +400,7 @@ p {
 .about-grid {
   display: grid;
   gap: 32px;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  grid-template-columns: 1fr;
 }
 
 .about-card {
@@ -472,15 +472,14 @@ p {
 .about-gallery {
   display: grid;
   gap: 20px;
-  grid-template-columns: 1.1fr 0.9fr;
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .image-card {
   position: relative;
   border-radius: 28px;
   overflow: hidden;
-  min-height: 220px;
+  aspect-ratio: 4 / 3;
   box-shadow: 0 24px 52px rgba(15, 23, 42, 0.08);
 }
 
@@ -508,7 +507,6 @@ p {
 }
 
 .gallery-small {
-  min-height: 220px;
 }
 
 .products-grid {
@@ -1499,4 +1497,49 @@ p {
     width: 100%;
     max-width: 100%;
   }
+}
+
+/* ── Botón de Traducción EN / ES ── */
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.lang-btn.lang-active {
+  border-color: var(--accent);
+  background: rgba(245, 158, 11, 0.10);
+  color: var(--accent-dark);
+}
+
+.lang-btn--mobile {
+  align-self: flex-start;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.lang-btn--mobile:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+  background: rgba(245, 158, 11, 0.06);
 }
